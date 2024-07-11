@@ -1,7 +1,6 @@
 @extends('head')
 @section('content')
 
-    <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="hero-bg">
         <img src="assets/img/hero-bg-light.webp" alt="">
@@ -16,9 +15,9 @@
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section>
 
-    <!-- About Section -->
+
     <section id="about" class="about section">
 
       <div class="container">
@@ -136,5 +135,5 @@
         </div>
 
       </div>
-    </section><!-- /About Section -->
+    </section>
 @endsection

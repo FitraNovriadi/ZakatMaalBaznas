@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BuktiSetoranZakat;
 use Illuminate\Http\Request;
 use App\Models\Penyetor;
 use App\Models\PembayaranZakat;
@@ -9,20 +10,20 @@ use Illuminate\Support\Facades\Storage;
 
 class ZakatController extends Controller
 {
-    public function index()
+    public function index()//menampilkan view home
     {
         return view('home');
     }
 
-    public function FormPerhitungan()
+    public function FormPerhitungan()//menampilkan view kalkulator
     {
         return view('template.kalkulator');
     }
 
-    public function Perhitungan(Request $request)
+    public function Perhitungan(Request $request)//memperoses data form kalkulator
     {
         $total_harta = $request->input('total_harta');
-        $nishab = 82312725; // Contoh nilai, sesuaikan dengan kebutuhan
+        $nishab = 82312725; // Nominal Nishab
 
         if ($total_harta < $nishab) {
             return redirect('/perhitungan-zakat')
@@ -30,18 +31,19 @@ class ZakatController extends Controller
                 ->withInput();
         }
 
-        $zakat = $total_harta * 0.025;
+        $zakat = $total_harta * 0.025;//matematika
 
         return view('template.hasilPerhitungan', ['zakat' => $zakat]);
     }
 
-    public function FormPembayaran()
+    public function FormPembayaran()//menampilkan view bayar
     {
         return view('bayar');
     }
 
-    public function pembayaran(Request $request)
+    public function pembayaran(Request $request)// memperoses form bayar
     {
+        //Validasi input
         $data = $request->validate([
             'jenis_dana' => 'required',
             'nominal' => 'required|numeric',
@@ -62,29 +64,33 @@ class ZakatController extends Controller
             'nominal' => $data['nominal']
         ]);
 
-        // Generate Bukti Setor Zakat (BSZ)
-        $bsz = "BSZ" . str_pad($pembayaranZakat->id, 8, '0', STR_PAD_LEFT);
+        $bsz = "BSZ" . str_pad($pembayaranZakat->id, 8, '0', STR_PAD_LEFT);//membuat nomor tiket pembayaran zakat
 
         return redirect()->route('hasilPembayaran', $pembayaranZakat->id);
     }
 
-    public function info()
+    public function info()// menampilkan view info
     {
         return view('info');
     }
 
-    public function FormBank()
+    public function FormBank()// menampilkan view bank
     {
         return view('bank');
     }
 
-    public function hasilPembayaran($id)
+    // public function viewAdmin()// menampilkan view admin
+    // {
+    //     return view('admindash.admin');
+    // }
+
+    public function hasilPembayaran($id)// menampilkan tiket pembayaran
     {
         $pembayaranZakat = PembayaranZakat::findOrFail($id);
         $bsz = "BSZ" . str_pad($pembayaranZakat->id, 8, '0', STR_PAD_LEFT);
         
-        $whatsappMessage = "Terima kasih telah membayar zakat. Berikut adalah Bukti Setor Zakat (BSZ) Anda: " . $bsz;
-        $whatsappUrl = "https://wa.me/628990807716?text=" . urlencode($whatsappMessage);
+        $whatsappMessage = "Terima kasih telah membayar zakat. Berikut adalah Tiket Pembayaran Zakat Anda: " . $bsz;
+        $whatsappUrl = "https://wa.me/628117489991?text=" . urlencode($whatsappMessage);
         
         return view('hasilPembayaran', ['pembayaranZakat' => $pembayaranZakat, 'bsz' => $bsz, 'whatsappUrl' => $whatsappUrl]);
     }

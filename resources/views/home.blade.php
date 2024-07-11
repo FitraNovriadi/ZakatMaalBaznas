@@ -1,7 +1,7 @@
 @extends('head')
 @section('content')
 
-    <!-- Hero Section -->
+
     <section id="hero" class="hero section">
       <div class="hero-bg">
         <img src="assets/img/hero-bg-light.webp" alt="">
@@ -17,9 +17,9 @@
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section>
 
-        <!-- Featured Services Section -->
+        
     <section id="featured-services" class="featured-services section light-background">
 
         <div class="container">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 </div>
-                <!-- End Service Item -->
+                
 
                 <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-item d-flex">
@@ -45,7 +45,7 @@
                     <p class="description">infak adalah harta yang dikeluarkan oleh seseorang atau badan usaha di luar zakat untuk kemaslahatan umum.</p>
                     </div>
                 </div>
-                </div><!-- End Service Item -->
+                </div>
 
                 <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-item d-flex">
@@ -55,15 +55,15 @@
                     <p class="description">Menurut peraturan BAZNAS No.2 tahun 2016, sedekah adalah harta atau non harta yang dikeluarkan oleh seseorang atau badan usaha di luar zakat untuk kemaslahatan umum.</p>
                     </div>
                 </div>
-                </div><!-- End Service Item -->
+                </div>
 
             </div>
 
         </div>
 
-    </section><!-- /Featured Services Section -->
+    </section>
 
-    <!-- About Section -->
+    
     <section id="about" class="about section">
 
       <div class="container">
@@ -92,15 +92,15 @@
         </div>
 
       </div>
-    </section><!-- /About Section -->
+    </section>
 
-    <!-- Services Section -->
+    
     <section id="services" class="services section light-background">
 
-        <!-- Section Title -->
+        
         <div class="container section-title" data-aos="fade-up">
             <h2>Program Utama BAZNAS</h2>
-        </div><!-- End Section Title -->
+        </div>
 
         <div class="container">
 
@@ -114,7 +114,7 @@
                         <p>Beasiswa, bantuan pendidikan, dan pengembangan keterampilan bagi anak-anak dan remaja dari keluarga kurang mampu.</p>
                     </div>
                     </div>
-                </div><!-- End Service Item -->
+                </div>
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-item item-orange position-relative">
@@ -124,7 +124,7 @@
                         <p>Layanan kesehatan gratis, penyediaan fasilitas kesehatan, dan bantuan untuk penderita penyakit kronis.</p>
                     </div>
                     </div>
-                </div><!-- End Service Item -->
+                </div>
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-item item-teal position-relative">
@@ -134,7 +134,7 @@
                         <p>Pemberdayaan ekonomi mustahik melalui pelatihan keterampilan, modal usaha, dan pendampingan bisnis.</p>
                     </div>
                     </div>
-                </div><!-- End Service Item -->
+                </div>
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-item item-red position-relative">
@@ -144,7 +144,7 @@
                         <p>Bantuan kepada korban bencana alam, penyediaan kebutuhan dasar, dan pembangunan infrastruktur sosial.</p>
                     </div>
                     </div>
-                </div><!-- End Service Item -->
+                </div>
 
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-item item-indigo position-relative">
@@ -154,21 +154,20 @@
                         <p>Penyebaran nilai-nilai Islam, pendidikan keagamaan, dan pengembangan masjid dan lembaga keagamaan.</p>
                     </div>
                     </div>
-                </div><!-- End Service Item -->
+                </div>
 
             </div>
 
         </div>
 
-    </section><!-- /Services Section -->
+    </section>
 
-    <!-- Contact Section -->
+   
     <section id="contact" class="contact section">
 
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
             <h2>Kontak</h2>
-        </div><!-- End Section Title -->
+        </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -180,7 +179,7 @@
                     <h3>Alamat</h3>
                     <p>Jl. Pekan Baru No.55, Rw. Sari, Kec. Kota Baru, Kota Jambi, Jambi 36361</p>
                     </div>
-                </div><!-- End Info Item -->
+                </div>
 
                 <div class="col-lg-3 col-md-6">
                     <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
@@ -188,7 +187,7 @@
                     <h3>Kontak BAZNAS</h3>
                     <p>08117489991</p>
                     </div>
-                </div><!-- End Info Item -->
+                </div>
 
                 <div class="col-lg-3 col-md-6">
                     <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
@@ -196,19 +195,19 @@
                     <h3>Email</h3>
                     <p>baznasjambi@gmail.com</p>
                     </div>
-                </div><!-- End Info Item -->
+                </div>
 
                 </div>
 
                 <div class="row gy-4 mt-1">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300" >
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.0553731663812!2d103.57711086964771!3d-1.6210804998977375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2588e19e5ee58f%3A0x1af6e05bcf59b151!2sBAZNAS%20Provinsi%20Jambi!5e0!3m2!1sid!2sid!4v1720624252843!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div><!-- End Google Maps -->
+                    </div>
                     </div>
                 </div>
             </div>
 
         </div>
 
-    </section><!-- /Contact Section -->
+    </section>
 @endsection

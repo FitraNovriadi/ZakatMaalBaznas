@@ -10,17 +10,17 @@ use Illuminate\Support\Facades\Storage;
 
 class KonfirmasiController extends Controller
 {
-    public function formKonfirmasi()
+    public function formKonfirmasi() //menampilkan view konfirmasi
     {
         return view('konfirmasi');
     }
 
-    public function konfirmasi(Request $request)
+    public function konfirmasi(Request $request) //memperoses data form konfirmasi
     {
         $data = $request->validate([
             'nama' => 'required|string',
             'jenis_kelamin' => 'required|in:laki-laki,perempuan',
-            'jenis_pembayaran' => 'required|string|in:Zakat,Fitrah',
+            'jenis_pembayaran' => 'required|string|in:Zakat',
             'sub_jenis_pembayaran' => 'required|string',
             'email' => 'required|email',
             'tanggal_transfer' => 'required|date',
@@ -31,7 +31,7 @@ class KonfirmasiController extends Controller
             'foto_bukti' => 'required|image|max:2048'
         ]);
 
-        $data['foto_bukti'] = $request->file('foto_bukti')->store('bukti_transaksi', 'public');
+        $data['foto_bukti'] = $request->file('foto_bukti')->store('bukti_transaksi', 'public');//menyimpan foto kedalam public bukti transaksi
 
         $penyetor = Penyetor::firstOrCreate(
             ['email' => $data['email']],
@@ -44,6 +44,7 @@ class KonfirmasiController extends Controller
             'nominal' => $data['nominal']
         ]);
 
+        //menyimpan data konfirmasi
         BuktiSetoranZakat::create([
             'penyetor_id' => $penyetor->id,
             'pembayaran_id' => $pembayaran->id,
@@ -60,6 +61,7 @@ class KonfirmasiController extends Controller
             'foto_bukti' => $data['foto_bukti']
         ]);
 
+        //pesan jika konfirmasi dikirim
         return redirect('/konfirmasi')->with('message', 'Pembayaran sedang dikonfirmasi, hasil konfirmasi akan kami berikan melalui email.');
     }
 }

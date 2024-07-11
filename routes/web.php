@@ -14,3 +14,4 @@ Route::get('/konfirmasi', [KonfirmasiController::class, 'formKonfirmasi'])->name
 Route::post('/konfirmasi', [KonfirmasiController::class, 'konfirmasi'])->name('konfirmasi');
 Route::get('/hasil-pembayaran/{pembayaranZakat}', [ZakatController::class, 'hasilPembayaran'])->name('hasilPembayaran');
 Route::get('/transfer', [ZakatController::class, 'FormBank'])->name('FormBank');
+// Route::get('/admin', [ZakatController::class, 'viewAdmin'])->name('viewAdmin');
