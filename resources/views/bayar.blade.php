@@ -1,7 +1,7 @@
 @extends('head')
 @section('content')
     <div class="container" style="margin-top: 10%; margin-bottom: 10%; width: 60%;">
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-success" role="alert">
             Panduan Penggunaan:
         <ul>
             <li>Isi data dengan benar.</li>
@@ -43,7 +43,7 @@
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" class="form-control" required>
             </div><br>
-            <button type="submit" class="btn btn-primary">Proses Tiket</button>
+            <button type="submit" class="btn btn-success">Proses Tiket</button>
         </form>
     </div>
 @endsection

@@ -85,7 +85,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-success" role="alert">
             Panduan Pembayaran:
         <ul>
             <li>1. Pilih Jenis Bank yang dikehendaki lalu Salin Nomor Rekening</li>

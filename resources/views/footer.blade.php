@@ -14,10 +14,9 @@
         <p><strong>Email:</strong> <span>baznasjambi@gmail.com</span></p>
       </div>
       <div class="social-links d-flex mt-4">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/baznasprovjambi" target="_blank"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/baznasprovjambi/" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/baznasprovjambi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
 

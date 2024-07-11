@@ -28,7 +28,7 @@
           <li class="nav-item">
               <a class="nav-link active" href="/transfer">Transfer Zakat</a>
           </li>
-          <li><a href="https://wa.me/628117489991?text=">Kontak</a></li>
+          <li><a class="nav-link active" href="https://wa.me/628117489991?text=">Kontak</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

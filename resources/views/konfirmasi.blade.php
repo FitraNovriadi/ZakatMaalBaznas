@@ -1,7 +1,7 @@
 @extends('head')
 @section('content')
     <div class="container" style="margin-top: 10%; margin-bottom: 10%; width: 60%;">
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-success" role="alert">
             ISI DATA DENGAN BENAR!
         </div>
         <h3>Konfirmasi Pembayaran Zakat Maal</h3><br>
@@ -65,7 +65,7 @@
                 <label for="foto_bukti">Foto Bukti Transfer:</label>
                 <input type="file" id="foto_bukti" name="foto_bukti" class="form-control-file" accept="image/*" required>
             </div><br>
-            <button type="submit" class="btn btn-primary">Kirim Konfirmasi</button>
+            <button type="submit" class="btn btn-success">Kirim Konfirmasi</button>
         </form>
     </div>
 
